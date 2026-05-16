@@ -98,10 +98,10 @@ export default function GameFilter({
           <label className="block text-[10px] text-slate-500 font-medium tracking-[0.15em] uppercase mb-2.5">
             Victory Point Target
           </label>
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <button
               onClick={() => onPointsTargetsChange([])}
-              className={`btn-option px-3 text-center ${pointsTargets.length === 0 ? 'btn-active' : 'btn-inactive'}`}
+              className={`btn-option flex-1 text-center ${pointsTargets.length === 0 ? 'btn-active' : 'btn-inactive'}`}
             >
               Any
             </button>
@@ -109,7 +109,7 @@ export default function GameFilter({
               <button
                 key={n}
                 onClick={() => onPointsTargetsChange(toggle(pointsTargets, n))}
-                className={`btn-option w-16 text-center ${pointsTargets.includes(n) ? 'btn-active' : 'btn-inactive'}`}
+                className={`btn-option flex-1 text-center ${pointsTargets.includes(n) ? 'btn-active' : 'btn-inactive'}`}
               >
                 {n} VP
               </button>
@@ -146,12 +146,12 @@ export default function GameFilter({
           <label className="block text-[10px] text-slate-500 font-medium tracking-[0.15em] uppercase mb-2.5">
             Handicap Unit
           </label>
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             {([1, 0.5] as const).map((u) => (
               <button
                 key={u}
                 onClick={() => onUnitChange(u)}
-                className={`btn-option w-16 text-center ${u === unit ? 'btn-active' : 'btn-inactive'}`}
+                className={`btn-option flex-1 text-center ${u === unit ? 'btn-active' : 'btn-inactive'}`}
               >
                 {u === 1 ? '1 VP' : '½ VP'}
               </button>

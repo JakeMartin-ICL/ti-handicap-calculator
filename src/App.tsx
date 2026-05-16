@@ -148,6 +148,7 @@ export default function App() {
             <div className="flex justify-between items-center mb-3">
               <div className="flex items-center gap-2">
                 <ColorModeToggle colorMode={colorMode} onChange={setColorMode} />
+                <div className="w-px h-4 bg-space-500 mx-1" />
                 <button
                   onClick={() => setShowWinRate(v => !v)}
                   className={`text-xs px-3 py-1.5 rounded border transition-colors duration-150 ${showWinRate ? 'bg-space-600 border-space-400 text-slate-300' : 'border-space-500 text-slate-600 hover:text-slate-400 hover:border-space-400'}`}
@@ -211,6 +212,7 @@ export default function App() {
             <div className="flex justify-between items-center mb-3">
               <div className="flex items-center gap-2">
                 <ColorModeToggle colorMode={colorMode} onChange={setColorMode} />
+                <div className="w-px h-4 bg-space-500 mx-1" />
                 <button
                   onClick={() => setShowWinRate(v => !v)}
                   className={`text-xs px-3 py-1.5 rounded border transition-colors duration-150 ${showWinRate ? 'bg-space-600 border-space-400 text-slate-300' : 'border-space-500 text-slate-600 hover:text-slate-400 hover:border-space-400'}`}
