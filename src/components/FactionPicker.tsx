@@ -17,14 +17,11 @@ export default function FactionPicker({
     <div className="card">
       <div className="card-header">
         <div className="flex items-center justify-between">
-          <span className="card-title">Faction Seats</span>
+          <span className="card-title">Faction Filter</span>
           <span className="text-[10px] text-slate-600 tracking-wider uppercase">Optional</span>
         </div>
       </div>
       <div className="card-body">
-        <p className="text-xs text-slate-600 mb-4 leading-relaxed">
-          Select factions to highlight their handicaps in the results.
-        </p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-3">
           {Array.from({ length: playerCount }, (_, i) => (
             <div key={i}>

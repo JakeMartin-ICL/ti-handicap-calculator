@@ -19,10 +19,6 @@ export default function Header({ loading, error, gameCount }: Props) {
         Handicap Calculator
       </h1>
 
-      <p className="text-slate-500 text-sm max-w-sm mx-auto leading-relaxed">
-        Data‑driven VP adjustments to level the playing field across all 24 factions.
-      </p>
-
       <div className="mt-5 h-5 flex items-center justify-center">
         {loading && (
           <span className="text-xs text-slate-600 animate-pulse tracking-wide">
