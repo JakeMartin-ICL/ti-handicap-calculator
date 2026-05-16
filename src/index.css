@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-space-950;
+  }
+
+  body {
+    @apply text-slate-200 font-body antialiased min-h-screen;
+    background: linear-gradient(160deg, #0d1424 0%, #04060f 45%, #080c14 100%);
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-space-800 border border-space-500 rounded-lg overflow-hidden;
+  }
+
+  .card-header {
+    @apply px-5 py-3 border-b border-space-500 bg-space-700;
+    border-top: 2px solid #c9a227;
+  }
+
+  .card-title {
+    @apply font-display text-xs font-semibold tracking-[0.2em] uppercase text-gold-400;
+  }
+
+  .card-body {
+    @apply p-5;
+  }
+
+  .btn-option {
+    @apply px-4 py-2 rounded text-sm font-medium transition-all duration-150 cursor-pointer border select-none;
+  }
+
+  .btn-active {
+    @apply bg-gold-500 border-gold-400 text-space-900 font-semibold;
+  }
+
+  .btn-inactive {
+    @apply bg-transparent border-space-400 text-slate-400 hover:border-gold-600 hover:text-gold-400;
+  }
+
+  .faction-select {
+    @apply w-full bg-space-700 border border-space-400 rounded px-3 py-2 text-sm text-slate-200
+           focus:outline-none focus:border-gold-500 transition-colors duration-150 cursor-pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%238a96a4' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 28px;
+  }
+
+  .faction-select:focus {
+    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.2);
+  }
+}
